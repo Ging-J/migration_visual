@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Population Map</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/map.css">
+   
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- <div id="reset-view">
+            <i class="fa fa-refresh"></i>
+        </div> -->
+
+        <!-- map -->
+        <div id="map">
+           
+        </div>
+        
+        <svg id="point-map"></svg>
+        <div id="renderer-container" class=""></div>
+
+        <div class="filter-panel">
+            <!-- country -->
+            <div class="country-filter">
+                <div class="form-group mx-2">
+                    <label for="from" class="label">Origin</label>
+                    <select type="text" name="from" id="from" class="form-control" placeholder="From ...">
+                        <option value="all">All</option>
+                    </select>
+                </div>
+                <div class="form-group mx-2">
+                    <label for="to" class="label">Destination</label>
+                    <select type="text" name="to" id="to" class="form-control" placeholder="To...">
+                        <option value="all">All</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="popup-events" id="popup-events">
+
+            </div>
+        </div>
+
+        <div class="slider-panel" id="slider">
+            <div class="animate-slider mr-5" id="animate-slider">
+                <div class="header-section">
+                    <p style="margin:0; font-size: 0.8em;">Year</p>
+                    <div class="play-btn" id="play-btn">
+                        <i class="fa fa-pause"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-time" id="slider-time"></div>
+        </div>
+
+        <!-- svg -->
+    </div>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://unpkg.com/d3-simple-slider"></script>
+    <script src='https://unpkg.com/@turf/turf@6.3.0/turf.min.js'></script>
+    <script src="https://d3js.org/d3-geo.v2.min.js"></script>
+
+    <script src="js/Three.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/particles.js"></script>
+</body>
+</html>

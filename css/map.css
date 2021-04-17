@@ -1,0 +1,259 @@
+:root {
+    --primary:#148812;
+    --gray:#ddd;
+    --white:#fff;
+    --transparent-white: rgba(255, 255, 255, 0.46);
+    --blue:blue;
+    --green:green;
+    --black:#000;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+#renderer-container {
+    width: 100%;
+    height: 100%;   
+}
+
+#point-map {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    pointer-events: none;
+    z-index: 1;
+}
+
+canvas {
+    position:absolute;
+    pointer-events:none;
+}
+
+.reset-view {
+    background-color: var(--black);
+    color:var(--white);
+    padding: 0.4em 0.8em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* map styling */
+#map {
+    top:0;
+    left: 0;
+    right: 0;
+    position:absolute; 
+    width:100vw; 
+    height:100vh;
+}
+
+.mapboxgl-ctrl-group {
+    border-radius: 4px;
+    background: var(--black) !important;
+}
+
+.mapboxgl-ctrl button.mapboxgl-ctrl-zoom-in .mapboxgl-ctrl-icon {
+    background-image: none !important;
+    color:var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mapboxgl-ctrl button.mapboxgl-ctrl-zoom-out .mapboxgl-ctrl-icon {
+    background-image: none !important;
+    color:var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mapboxgl-interactive {
+    height:850px;
+}
+
+.mapboxgl-popup {
+    z-index: 2;
+}
+
+.mapboxgl-popup-content {
+    padding:0 !important;
+    font-size: 1rem;
+}
+
+.popup-content .popup-title {
+    background-color:var(--gray);
+    padding: 3px 10px 3px 4px;
+}
+
+.popup-content .description {
+    padding: 10px 10px 15px;
+    font-size:14px;
+}
+
+.div-marker {
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* particle system container */
+#renderer-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: transparent;
+}
+
+/* origin destination filer */
+.filter-panel {
+    position: absolute;
+    top:2%;
+    left: 1%;
+    width: 20%;
+    height: auto;
+    padding:0.5rem 0.25rem;
+    background-color: transparent;
+    z-index: 2;
+    /* box-shadow: 2px 2px 0.3em rgb(88, 88, 88); */
+}
+
+.filter-panel select {
+    border-radius: 2px;
+    border: 1px solid var(--gray);
+    padding:0.3em 0.5em;
+}
+
+.country-filter {
+    display: flex;
+    color:var(--white);
+    flex-direction: column;
+    justify-content: space-around;
+    background-color:var(--transparent-white);
+    padding:0.5rem 0.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 0.7em;
+}
+
+.popup-events{ 
+    /* width:20%; */
+    max-height: 60vh;
+    overflow-y:auto;
+}
+
+.popup-event {
+    color:var(--white);
+    margin-bottom: 0.5em;
+    background-color:var(--transparent-white);
+    padding:0.2em 0.1em;
+}
+
+.popup-event .title {
+    font-weight: 800;
+}
+
+#suggestions {
+    position: absolute;
+    top: 16%;
+    left: 2%;
+    right: 2%;
+    box-shadow: 2px 2px 0.5em var(--black);
+}
+
+#suggestions .list-group-item:hover {
+    background-color:var(--blue);
+    color:var(--white);
+}
+
+.year-filter {
+    position: absolute;
+    top: 2%;
+    right: 4%;
+    background-color:var(--white);
+    padding: 0.25rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+}
+
+.attribute-filter {
+    background-color: var(--white);
+    height: auto;
+    padding:0.5rem 0.25rem;
+}
+
+/* slider container */
+.slider-panel {
+    position: absolute;
+    bottom: 2%;
+    left: 5%;
+    width: auto;
+    height: 100px;
+    background-color: var(--transparent-white);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 2;
+    padding: 0rem 0.5rem;
+}
+
+.axis text,
+.slider text {
+  font-size: 14px;
+}
+
+.axis text {
+    fill:var(--white);
+}
+
+.slider text {
+    fill: var(--blue);
+}
+
+.animate-slider {
+    color:var(--black);
+    font-size: 2em;
+    margin-right: 1em;
+}
+
+/* svg styling */
+.hidden, .d-none {
+    display: none !important;
+}
+
+.header-section {
+    padding:0.4em 0.2em;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color:var(--white);
+}
+
+.header-section .play-btn {
+    cursor: pointer;
+    margin-top:0.3em;
+    font-size: 1rem;
+}
+
+.header-section p {
+    margin: 0;
+}
+
