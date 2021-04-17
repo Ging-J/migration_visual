@@ -3,6 +3,7 @@
     --gray:#ddd;
     --white:#fff;
     --transparent-white: rgba(255, 255, 255, 0.46);
+    --transparent-black:rgb(0, 0, 0, 46%);
     --blue:blue;
     --green:green;
     --black:#000;
@@ -137,7 +138,7 @@ canvas {
     color:var(--white);
     flex-direction: column;
     justify-content: space-around;
-    background-color:var(--transparent-white);
+    background-color:var(--transparent-black);
     padding:0.5rem 0.25rem;
 }
 
@@ -159,7 +160,7 @@ canvas {
 .popup-event {
     color:var(--white);
     margin-bottom: 0.5em;
-    background-color:var(--transparent-white);
+    background-color:var(--transparent-black);
     padding:0.2em 0.1em;
 }
 
@@ -204,7 +205,7 @@ canvas {
     left: 5%;
     width: auto;
     height: 100px;
-    background-color: var(--transparent-white);
+    background-color: var(--transparent-black);
     display: flex;
     justify-content: flex-start;
     align-items: center;
