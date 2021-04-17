@@ -15,6 +15,8 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    font-family:Helvetica, sans-serif;
+    line-height: 1.4;
 }
 
 .container-fluid {
@@ -118,7 +120,7 @@ canvas {
 .filter-panel {
     position: absolute;
     top:2%;
-    left: 1%;
+    right: 1%;
     width: 20%;
     height: auto;
     padding:0.5rem 0.25rem;
@@ -161,7 +163,8 @@ canvas {
     color:var(--white);
     margin-bottom: 0.5em;
     background-color:var(--transparent-black);
-    padding:0.2em 0.1em;
+    padding:0.2em 0.3em;
+    font-size: 0.9em;
 }
 
 .popup-event .title {
