@@ -8,8 +8,9 @@ var clicked = "0";
 var clickedCentroid = 0;
 var tempflows;
 var popup;
-var activeYear = 1995;
+var activeYear = 2000;
 var requestAnim;
+// var maxAgeObject = {1990:[], 1995:[], 2000:[], 2005:[], 2010:[], 2015:[], 2019:[]};
 
 // colors used on the centroids
 var centroidColors  = {
@@ -278,14 +279,20 @@ function createParticleSystem(startarr) {
                 0);	
 
             particle.startpt = [startpoint[0],startpoint[1]];
-            particle.age = Math.round(maxage * q / cntarr[p]);
+
+            // if(maxAgeObject[filterObject.activeYear].length == 0) {
+                // particle.age = Math.round(maxage * q / cntarr[p]);
+                // particle.agestart = particle.age;
+
+                // maxAgeObject[filterObject.activeYear].push(particle.age);
+            // }
 
             particle.from = xtofromarr[p][1];
             particle.to = xtofromarr[p][0];
 
             particle.ystart = pY;
             particle.xstart = pX;
-            particle.agestart = particle.age;
+            
             
             if(particle.velocity.x != 0 && particle.velocity.y != 0) {
                 particles.vertices.push(particle);
@@ -297,6 +304,19 @@ function createParticleSystem(startarr) {
         }
     }
 
+
+    // update the particle system maxage
+    if(maxAgeObject[filterObject.activeYear]) {
+        let activeMaxAgeArray = maxAgeObject[filterObject.activeYear];
+        particles.vertices.forEach((p, i) => {  
+            p.age = activeMaxAgeArray[i];
+            p.agestart = p.age;
+        });
+
+        // console.log(maxAgeObject[filterObject.activeYear].toString());
+        // console.log(particles.vertices.map(p => p.age).toString());
+    }
+    
 
     particleSystem = new THREE.ParticleSystem(
             particles,

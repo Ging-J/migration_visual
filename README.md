@@ -36,7 +36,7 @@ Add interactivity to the web application.
 
 
 ## Instructions on displaying on Laptop
-I have hosted the application on your github account. Here is the [link](https://ging-j.github.io/population_map/)
+I have hosted the application on your github account. Here is the [link](https://ging-j.github.io/migration_visual/)
 
 ## Instructions on how to use the filters
 ### Time Slider
@@ -58,10 +58,10 @@ Reset the map back to default.
 The map can be share in two way. One as a link to the hosted map i.e [Map](https://ging-j.github.io/population_map/)
 The second method as an IFrame container on another website. 
 
-`html
-<iframe src="https://ging-j.github.io/population_map/" height="600" width="1200">
+```html
+<iframe src="https://ging-j.github.io/migration_visual/" height="600" width="1200">
 </iframe>
-`
+```
 
 ### How to show the map and the selection panel on two different screen
 The selection panel and the map are part of the same UI, hence they will always appear on the same screen.
