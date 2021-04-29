@@ -29,7 +29,7 @@ var dataTime = d3.range(0, 35, 5).map(function(d) {
   return new Date(1990 + d, 1, 1);
 });
 
-var sliderWidth = document.body.clientWidth * 0.8;
+var sliderWidth = document.body.clientWidth * 0.88;
 console.log("Silder: " + sliderWidth);
 
 var sliderTime = d3
@@ -99,7 +99,7 @@ var sliderTime = d3
 var gTime = d3
     .select('div#slider-time')
     .append('svg')
-    .attr('width', "85vw")
+    .attr('width', "93vw")
     .attr('height', 70)
     .append('g')
     .attr('transform', 'translate(30,30)');
